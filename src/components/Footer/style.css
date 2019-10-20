@@ -1,0 +1,13 @@
+.footer {
+    height: 100px;
+    background-color: darkcyan;
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: end;
+}
+
+.bottom {
+    padding: 8px;
+    font-weight: 600;
+    text-align: left;
+}

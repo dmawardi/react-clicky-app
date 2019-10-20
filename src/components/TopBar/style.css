@@ -1,0 +1,13 @@
+/* Navbar */
+.navbar li {
+    padding: 26px 0;
+    width: 33.3%;
+    text-align: center;
+}
+
+.navbar {
+    box-shadow: 10px 0px 25px grey;
+    font-size: calc(10px + 14 * (100vw - 320px)/ 800);
+    list-style-type: none;
+    background-color: aliceblue;
+}
