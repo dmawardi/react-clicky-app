@@ -3,7 +3,7 @@
     background-color: darkcyan;
     display: flex;
     flex-direction: column-reverse;
-    align-content: end;
+    align-content: flex-end;
 }
 
 .bottom {

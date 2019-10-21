@@ -4,12 +4,14 @@ import './App.css';
 import TopBar from "./components/TopBar";
 import HeaderSection from "./components/HeaderSection";
 import Footer from "./components/Footer";
+import GameArea from './components/GameArea';
 
 function App() {
   return (
     <div className="App">
       <TopBar />
       <HeaderSection />
+      <GameArea />
       <Footer />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
