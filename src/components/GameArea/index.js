@@ -3,14 +3,13 @@ import "./style.css";
 // Image imports
 import imgArray from "./img";
 
-
-// let imageArray = [Auron, Barret, Cloud, Hope, Lightning, Noctis, Sephiroth, Seymour, Squall, Tidus, Viera, Yuna];
-
 class GameArea extends Component {
 
     state = {
         alreadyClicked: [],
-        imageArray: imgArray
+        imageArray: imgArray,
+        scoreCounter: 0,
+        highScore: 0
       };
 
       shuffleArray = () => {
@@ -26,16 +25,61 @@ class GameArea extends Component {
       }
     
       handleClick = event => {
-        console.log("clicking button");
-        console.log("event", event.target.getAttribute("data-value"));
+        //   Init variables for use
+        let idOfClickedCard = event.target.getAttribute("data-value");
+        let alreadyClickedArray = this.state.alreadyClicked;
+        let currentHighScore = this.state.highScore;
+
+        let currentScore = this.state.scoreCounter;
+        console.log("current sync score: ", currentScore);
+        // console.log("event", idOfClickedCard);
         
-        // Getting the value and name of the input which triggered the change
-        // const value = event.target.value;
-        // const name = event.target.name;
+        // If the id of the clicked card is not already contained in the clicked array
+        if (!alreadyClickedArray.includes(idOfClickedCard)) {
+            console.log("You have selected a new card! Your score increases by 1!");
+            // Add 1 to current score
+            currentScore += 1;
+            
+            // Increase counter by 1
+            if (currentHighScore < currentScore) {
+                // Assign new score to high score
+                currentHighScore = currentScore;
+                
+                console.log("High Score: ", currentHighScore, "\nCurrent ScoreCounter", currentScore);
+                this.setState({
+                    // Update High score to new high score
+                    highScore: currentHighScore,
+                    // Add to the current score by 1 and assign to state score counter
+                    scoreCounter: currentScore
+                });
+            } else {
+                // Add 1 to current score
+                console.log("High Score: ", currentHighScore, "\nCurrent ScoreCounter", currentScore);
+                // Set state counter
+                this.setState({
+                    // Add to the current score by 1 and assign to state score counter
+                    scoreCounter: currentScore
+                });
+                
+            }
+            // Add clicked id to array
+            alreadyClickedArray.push(idOfClickedCard);
+            console.log(alreadyClickedArray);
+
+        } else {
+            console.log("Card has already been selected before!");
+            // Set state counter
+            this.setState(() => ({
+                alreadyClicked: [],
+                // Add to the current score by 1 and assign to state score counter
+                scoreCounter: 0
+            }));
+        }
     
-        // Updating the input's state
+        // Updating the state's image array with the newly shuffled one
         this.setState({
-          imageArray: this.shuffleArray()
+            // alreadyClicked: this.state.alreadyClicked.push(idOfClickedCard),
+            imageArray: this.shuffleArray()
         });
       };
 
