@@ -1,8 +1,13 @@
+// Import React and css
 import React, { Component } from 'react';
 import "./style.css";
 
+// Header Section
 class HeaderSection extends Component {
+
   render() {
+
+    // Jumbotron header with instructions
     return (
 
         <div className="jumbotron">
@@ -13,4 +18,6 @@ class HeaderSection extends Component {
     )
 }
 }
-export default HeaderSection; // Don’t forget to use export default!
+
+// Export
+export default HeaderSection; 

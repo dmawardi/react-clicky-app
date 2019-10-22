@@ -1,3 +1,4 @@
+// Import all images
 import Auron from "./Auron.jpg";
 import Barret from "./Barret.jpg";
 import Cloud from "./Cloud.jpg";
@@ -11,6 +12,7 @@ import Tidus from "./Tidus.jpg";
 import Viera from "./Viera.jpg";
 import Yuna from "./Yuna.jpg";
 
+// Build characters object for export
 let characters = 
 [
     {
@@ -75,6 +77,7 @@ let characters =
     }
 
 
-]
+];
 
+// export 
 export default characters;

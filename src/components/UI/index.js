@@ -8,8 +8,10 @@ import HeaderSection from "../HeaderSection";
 import Footer from "../Footer";
 import GameArea from '../GameArea';
 
+// Class UI (an overall wrapper element for all our components)
 class UI extends Component {
 
+    // Init state variables
     state = {
         alreadyClicked: [],
         imageArray: imgArray,
@@ -18,6 +20,7 @@ class UI extends Component {
         userMessage: "Click on a tile to start!"
       };
 
+    //   Function to shuffle image array
       shuffleArray = () => {
         var shuffledArray = this.state.imageArray;
 
@@ -30,6 +33,7 @@ class UI extends Component {
           return shuffledArray;
       }
     
+    //   function to handle character tile click event
       handleClick = event => {
         //   Init variables for use
         let idOfClickedCard = event.target.getAttribute("data-value");
@@ -85,11 +89,13 @@ class UI extends Component {
             imageArray: this.shuffleArray()
         });
       };
-
+    
   render() {
-    return (
-    <div className="App">
 
+    return (
+
+    <div className="App">
+        {/* Order class components */}
         <TopBar message={this.state.userMessage} scoreCounter={this.state.scoreCounter} highScore={this.state.highScore}/>
         <HeaderSection />
         <GameArea imageArray={this.state.imageArray} handleClick={this.handleClick} />
@@ -99,4 +105,6 @@ class UI extends Component {
     )
 }
 }
-export default UI; // Don’t forget to use export default!
+
+// Export
+export default UI; 

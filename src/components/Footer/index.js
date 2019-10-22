@@ -1,6 +1,8 @@
+// import CSS and React components
 import React, { Component } from 'react';
 import "./style.css";
 
+// Footer class element
 class Footer extends Component {
   render() {
     return (
@@ -12,4 +14,6 @@ class Footer extends Component {
     )
 }
 }
-export default Footer; // Don’t forget to use export default!
+
+// Export default
+export default Footer; 

@@ -1,4 +1,10 @@
-.image-tile {
-    height: 20px;
-    width: 20px;
+/* Image tile CSS */
+.img-tile {
+    box-shadow: 3px 3px 3px grey;
+}
+
+/* Hover effect for image tiles */
+.img-tile:hover {
+    height: 95%;
+    box-shadow: 4px 4px 4px grey;
 }
