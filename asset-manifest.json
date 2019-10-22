@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-clicky-app/static/css/main.77ebc2fc.chunk.css",
+    "main.js": "/react-clicky-app/static/js/main.8661c48f.chunk.js",
+    "main.js.map": "/react-clicky-app/static/js/main.8661c48f.chunk.js.map",
+    "runtime-main.js": "/react-clicky-app/static/js/runtime-main.dc29d9c6.js",
+    "runtime-main.js.map": "/react-clicky-app/static/js/runtime-main.dc29d9c6.js.map",
+    "static/js/2.74003a14.chunk.js": "/react-clicky-app/static/js/2.74003a14.chunk.js",
+    "static/js/2.74003a14.chunk.js.map": "/react-clicky-app/static/js/2.74003a14.chunk.js.map",
+    "index.html": "/react-clicky-app/index.html",
+    "precache-manifest.17cacd7c69997d4d8355e3474a948f2f.js": "/react-clicky-app/precache-manifest.17cacd7c69997d4d8355e3474a948f2f.js",
+    "service-worker.js": "/react-clicky-app/service-worker.js",
+    "static/css/main.77ebc2fc.chunk.css.map": "/react-clicky-app/static/css/main.77ebc2fc.chunk.css.map",
+    "static/media/style.css": "/react-clicky-app/static/media/Final-Fantasy-Background.15781a1e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dc29d9c6.js",
+    "static/js/2.74003a14.chunk.js",
+    "static/css/main.77ebc2fc.chunk.css",
+    "static/js/main.8661c48f.chunk.js"
+  ]
+}
