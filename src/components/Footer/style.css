@@ -1,6 +1,6 @@
 .footer {
     height: 100px;
-    background-color: darkcyan;
+    background-color: rgb(51,61,53);
     display: flex;
     flex-direction: column-reverse;
     align-content: flex-end;
@@ -10,4 +10,5 @@
     padding: 8px;
     font-weight: 600;
     text-align: left;
+    color: aliceblue;
 }
