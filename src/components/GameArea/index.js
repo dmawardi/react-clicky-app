@@ -1,6 +1,5 @@
 import React from 'react';
 import "./style.css";
-// Image imports
 
 function GameArea(props) {
     return (

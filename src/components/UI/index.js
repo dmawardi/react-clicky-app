@@ -37,12 +37,9 @@ class UI extends Component {
         let currentHighScore = this.state.highScore;
 
         let currentScore = this.state.scoreCounter;
-        console.log("current sync score: ", currentScore);
-        // console.log("event", idOfClickedCard);
         
         // If the id of the clicked card is not already contained in the clicked array
         if (!alreadyClickedArray.includes(idOfClickedCard)) {
-            console.log("You have selected a new card! Your score increases by 1!");
             // Add 1 to current score
             currentScore += 1;
             
@@ -51,18 +48,19 @@ class UI extends Component {
                 // Assign new score to high score
                 currentHighScore = currentScore;
                 
-                console.log("High Score: ", currentHighScore, "\nCurrent ScoreCounter", currentScore);
                 this.setState({
                     // Update High score to new high score
                     highScore: currentHighScore,
+                    // Set new user message
+                    userMessage: "You have selected a new card! Score+1!",
                     // Add to the current score by 1 and assign to state score counter
                     scoreCounter: currentScore
                 });
             } else {
                 // Add 1 to current score
-                console.log("High Score: ", currentHighScore, "\nCurrent ScoreCounter", currentScore);
                 // Set state counter
                 this.setState({
+                    userMessage: "You have selected a new card! Score+1!",
                     // Add to the current score by 1 and assign to state score counter
                     scoreCounter: currentScore
                 });
@@ -70,13 +68,12 @@ class UI extends Component {
             }
             // Add clicked id to array
             alreadyClickedArray.push(idOfClickedCard);
-            console.log(alreadyClickedArray);
 
         } else {
-            console.log("Card has already been selected before!");
             // Set state counter
             this.setState(() => ({
                 alreadyClicked: [],
+                userMessage: "That's the same card! You lose!",
                 // Add to the current score by 1 and assign to state score counter
                 scoreCounter: 0
             }));
