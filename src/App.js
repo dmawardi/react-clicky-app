@@ -1,18 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TopBar from "./components/TopBar";
-import HeaderSection from "./components/HeaderSection";
-import Footer from "./components/Footer";
-import GameArea from './components/GameArea';
+import UI from "./components/UI";
 
 function App() {
+
   return (
     <div className="App">
-      <TopBar />
-      <HeaderSection />
-      <GameArea />
-      <Footer />
+      <UI />
+      
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

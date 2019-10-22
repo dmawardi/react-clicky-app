@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class ScorePrompt extends Component {
-  render() {
-    return (
-            <li>Score: 0 | Top Score: 0</li>
-            
-    )
+function ScorePrompt(props) {
+  return (
+          <li>Score: <span>{props.currentScore}</span> | Top Score: <span>{props.highScore}</span></li>
+          
+  )
+
 }
-}
+
 export default ScorePrompt; // Don’t forget to use export default!

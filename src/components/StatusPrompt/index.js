@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class StatusPrompt extends Component {
-  render() {
-    return (
-            <li>Game to Begin</li>
-            
-    )
+function StatusPrompt(props) {
+  return (
+    <li>{props.message}</li>
+    
+)
+
 }
-}
+
 export default StatusPrompt; // Don’t forget to use export default!
